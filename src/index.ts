@@ -1,15 +1,11 @@
-class Student {
-  fullName: string;
-  constructor(public firstName: string, public middleInitial: string, public lastName: string) {
-    this.fullName = `${firstName} ${middleInitial} ${lastName}`;
-  }
+import _ from 'lodash';
+const component = () => {
+    const element = document.createElement('div');
+
+    // Lodash, now imported by this script
+    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+
+    return element;
 }
-interface Person {
-  firstName: string;
-  lastName: string;
-}
-function greeter(person: Person) {
-  return `Hello, ${person.firstName} ${person.lastName}`;
-}
-const user = new Student('Jane', 'M.', 'User');
-document.body.innerHTML = greeter(user);
+
+document.body.appendChild(component());

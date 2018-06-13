@@ -1,18 +1,22 @@
-'use strict';
+const path = require('path');
 
 module.exports = {
-    devtool: 'inline-source-map',
     entry: './src/index.ts',
+    devtool: 'inline-source-map',
     module: {
         rules: [
             {
                 test: /\.tsx?$/,
-                loader: 'ts-loader'
+                use: 'ts-loader',
+                exclude: /node_modules/
             }
         ]
     },
     resolve: {
-        extensions: ['.ts', '.tsx', '.js']
+        extensions: ['.tsx', '.ts', '.js']
     },
-    context: __dirname,
+    output: {
+        filename: 'main.js',
+        path: path.resolve(__dirname, 'dist')
+    }
 };
