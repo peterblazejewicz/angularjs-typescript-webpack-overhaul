@@ -1,8 +1,10 @@
-const path = require('path');
+import path from 'path';
+import webpack from 'webpack';
 
-module.exports = {
+const config: webpack.Configuration = {
     entry: './src/index.ts',
     devtool: 'inline-source-map',
+    mode: 'development',
     module: {
         rules: [
             {
@@ -20,3 +22,5 @@ module.exports = {
         path: path.resolve(__dirname, 'dist')
     }
 };
+
+export default config;
