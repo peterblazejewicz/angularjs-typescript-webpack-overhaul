@@ -1,11 +1,15 @@
-import _ from 'lodash';
-const component = () => {
-    const element = document.createElement('div');
+import uirouter from '@uirouter/angularjs';
 
-    // Lodash, now imported by this script
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+import angular from 'angular';
 
-    return element;
-}
+import home from './home/home.module';
 
-document.body.appendChild(component());
+// Import your app functionality
+
+export const app = angular.module("app", [
+    uirouter,
+    home.name,
+]);
+angular.bootstrap(document, [app.name], {
+    strictDi: true
+});

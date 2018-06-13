@@ -9,10 +9,21 @@ const config: webpack.Configuration = {
         rules: [
             {
                 test: /\.tsx?$/,
-                use: 'ts-loader',
+                use: [
+                    {
+                        loader: 'ts-loader',
+                    },
+                    {
+                        loader: 'angularjs-template-loader'
+                    }
+                ],
                 exclude: /node_modules/
+            },
+            {
+                test: /\.html$/,
+                use: ['raw-loader']
             }
-        ]
+        ],
     },
     resolve: {
         extensions: ['.tsx', '.ts', '.js']

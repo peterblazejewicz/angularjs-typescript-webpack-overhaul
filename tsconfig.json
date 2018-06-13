@@ -3,10 +3,14 @@
         "outDir": "./dist/",
         "noImplicitAny": true,
         "module": "es6",
+        "moduleResolution": "node",
         "sourceMap": true,
         "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
         "target": "es5",
-        "jsx": "react",
         "allowJs": true
-    }
+    },
+    "exclude": [
+        "dist"
+    ]
 }
