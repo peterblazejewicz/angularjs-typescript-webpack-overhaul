@@ -8,7 +8,11 @@
         "allowSyntheticDefaultImports": true,
         "esModuleInterop": true,
         "target": "es5",
-        "allowJs": true
+        "allowJs": true,
+        "lib": [
+            "es2015",
+            "dom"
+        ]
     },
     "exclude": [
         "dist"
