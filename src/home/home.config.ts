@@ -4,9 +4,10 @@ const HomeConfig = ($stateProvider: StateProvider) => {
   $stateProvider
     .state('home', {
       url: '',
-      controller: 'HomeCtrl',
-      controllerAs: '$ctrl',
-      templateUrl: './home.template.html',
+      component: 'home',
+      resolve: {
+        name: () => 'AngularJS',
+      },
     });
 };
 HomeConfig.$inject = ['$stateProvider'];

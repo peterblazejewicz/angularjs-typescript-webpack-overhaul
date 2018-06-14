@@ -1,7 +1,7 @@
+import { HomeComponent } from './home.component';
 import angular from 'angular';
 
 import HomeConfig from './home.config';
-import HomeCtrl from './home.controller';
 
 // Create the module where our functionality can attach to
 const homeModule = angular.module('home', []);
@@ -10,8 +10,8 @@ const homeModule = angular.module('home', []);
 
 homeModule.config(HomeConfig);
 
-// Controllers
+// Components
 
-homeModule.controller('HomeCtrl', HomeCtrl);
+homeModule.component('home', HomeComponent);
 
 export default homeModule
