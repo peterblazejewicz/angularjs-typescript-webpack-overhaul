@@ -19,10 +19,12 @@
   "homepage": "https://github.com/peterblazejewicz/angularjs-typescript-webpack-overhaul#readme",
   "devDependencies": {
     "@types/angular": "^1.6.47",
+    "@types/clean-webpack-plugin": "^0.1.2",
     "@types/lodash": "^4.14.109",
     "@types/node": "^10.3.2",
     "@types/webpack": "^4.4.0",
     "angularjs-template-loader": "^0.1.1",
+    "clean-webpack-plugin": "^0.1.19",
     "ngtemplate-loader": "^2.0.1",
     "raw-loader": "^0.5.1",
     "ts-loader": "^4.4.1",
