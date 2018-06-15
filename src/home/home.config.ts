@@ -1,4 +1,4 @@
-import { StateProvider } from "@uirouter/angularjs";
+import { StateProvider } from '@uirouter/angularjs';
 
 const HomeConfig = ($stateProvider: StateProvider) => {
   $stateProvider
@@ -6,7 +6,7 @@ const HomeConfig = ($stateProvider: StateProvider) => {
       url: '',
       component: 'home',
       resolve: {
-        name: () => 'AngularJS',
+        name: () => 'Angular JS',
       },
     });
 };

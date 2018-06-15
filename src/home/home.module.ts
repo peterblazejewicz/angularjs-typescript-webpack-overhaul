@@ -1,6 +1,6 @@
-import { HomeComponent } from './home.component';
 import angular from 'angular';
 
+import { HomeComponent } from './home.component';
 import HomeConfig from './home.config';
 
 // Create the module where our functionality can attach to

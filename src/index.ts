@@ -1,5 +1,4 @@
 import uirouter from '@uirouter/angularjs';
-
 import angular from 'angular';
 
 import home from './home/home.module';

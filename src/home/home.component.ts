@@ -1,4 +1,4 @@
-import { IComponentOptions, IController, IScope, IChangesObject, IOnChangesObject } from 'angular';
+import { IChangesObject, IComponentOptions, IController, IOnChangesObject, IScope } from 'angular';
 
 
 interface Changes extends IOnChangesObject {
@@ -13,7 +13,7 @@ class HomeController implements IController {
   constructor(public $scope: IScope) { }
 
   $onChanges(changes: Changes) {
-    if(changes.name) {
+    if (changes.name) {
       console.log(`name: ${changes.name.currentValue}`);
     }
   }
