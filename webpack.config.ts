@@ -1,7 +1,8 @@
-import path from 'path';
-import webpack from 'webpack';
 import CleanWebpackPlugin from 'clean-webpack-plugin';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import path from 'path';
+import webpack from 'webpack';
 
 const root = path.resolve(__dirname, 'src')
 const dist = path.resolve(__dirname, 'dist');
@@ -37,6 +38,9 @@ const config: webpack.Configuration = {
         from: `${root}/index.html`,
       }
     ]),
+    new HtmlWebpackPlugin({
+      template: `${root}/index.html`,
+    })
   ],
   resolve: {
     extensions: ['.tsx', '.ts', '.js']
