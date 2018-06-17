@@ -1,7 +1,10 @@
 import uirouter from '@uirouter/angularjs';
 import angular from 'angular';
 
-import home from './home/home.module';
+import about from './about/about.module';
+import people from "./people/people.module";
+import hello from './hello/hello.module';
+import person from './person/person.module';
 
 import "./styles/theme.scss";
 
@@ -10,7 +13,10 @@ import "./styles/theme.scss";
 
 export const app = angular.module("app", [
   uirouter,
-  home.name,
+  about.name,
+  hello.name,
+  people.name,
+  person.name,
 ]);
 
 angular.element(() => {

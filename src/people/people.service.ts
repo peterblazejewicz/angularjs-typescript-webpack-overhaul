@@ -6,15 +6,14 @@ export class PeopleService {
 
   constructor(private $http: IHttpService) { }
 
-  getAllPeople(): IPromise<{}> {
-    return this.$http.get('data/people.json', { cache: true })
+  getAllPeople(): IPromise<any[]> {
+    return this.$http.get<any[]>('data/people.json', { cache: true })
       .then(resp => resp.data);
   }
 
-  getPerson(id: string) {
+  getPerson(id: string): IPromise<{}> {
     return this.getAllPeople()
-      .then((people: any[]) => people
-        .find(man => man.id === id)[0]);
+      .then((people: any[]) => people.find(person => person.id === id));
   }
 
 }

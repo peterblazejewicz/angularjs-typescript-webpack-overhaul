@@ -43,7 +43,8 @@ const config: webpack.Configuration = {
     new CleanWebpackPlugin(['dist']),
     new CopyWebpackPlugin([
       {
-        from: `${root}/index.html`,
+        from: `${root}/data/people.json`,
+        to: `${dist}/data/people.json`,
       }
     ]),
     new HtmlWebpackPlugin({
