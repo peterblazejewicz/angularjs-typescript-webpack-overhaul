@@ -58,6 +58,9 @@ const config: webpack.Configuration = {
     filename: 'main.js',
     publicPath: '/',
     path: `${dist}/`,
+  },
+  devServer: {
+    historyApiFallback: true,
   }
 };
 
