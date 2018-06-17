@@ -1,5 +1,5 @@
-import { IComponentOptions } from "angular";
+import { IComponentOptions } from 'angular';
 
 export const AboutComponent: IComponentOptions = {
-  templateUrl: './about.template.html'
-}
+  templateUrl: './about.template.html',
+};

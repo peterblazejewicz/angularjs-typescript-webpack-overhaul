@@ -1,6 +1,6 @@
 import { IComponentOptions, IController } from 'angular';
 
-class PeopleController implements IController { }
+class PeopleController implements IController {}
 
 export const PeopleComponent: IComponentOptions = {
   bindings: {
@@ -8,4 +8,4 @@ export const PeopleComponent: IComponentOptions = {
   },
   controller: PeopleController,
   templateUrl: './people.template.html',
-}
+};
