@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "start": "TS_NODE_PROJECT=\"tsconfig-for-webpack-config.json\" webpack-dev-server --mode development --open --hot",
-    "prettier": "prettier --config ./prettier.config.json --write \"src/**/*.ts\""
+    "prettier": "prettier --config ./prettier.config.json --write \"**/*.ts\""
   },
   "repository": {
     "type": "git",

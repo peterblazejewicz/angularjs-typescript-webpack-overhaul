@@ -4,7 +4,7 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import path from 'path';
 import webpack from 'webpack';
 
-const root = path.resolve(__dirname, 'src')
+const root = path.resolve(__dirname, 'src');
 const dist = path.resolve(__dirname, 'dist');
 
 const config: webpack.Configuration = {
@@ -20,22 +20,18 @@ const config: webpack.Configuration = {
             loader: 'ts-loader',
           },
           {
-            loader: 'angularjs-template-loader'
-          }
+            loader: 'angularjs-template-loader',
+          },
         ],
-        exclude: /node_modules/
+        exclude: /node_modules/,
       },
       {
         test: /\.html$/,
-        use: ['raw-loader']
+        use: ['raw-loader'],
       },
       {
         test: /\.scss$/,
-        use: [
-          "style-loader",
-          "css-loader",
-          "sass-loader",
-        ],
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
     ],
   },
@@ -45,14 +41,14 @@ const config: webpack.Configuration = {
       {
         from: `${root}/data/people.json`,
         to: `${dist}/data/people.json`,
-      }
+      },
     ]),
     new HtmlWebpackPlugin({
       template: `${root}/index.html`,
-    })
+    }),
   ],
   resolve: {
-    extensions: ['.tsx', '.ts', '.js']
+    extensions: ['.tsx', '.ts', '.js'],
   },
   output: {
     filename: 'main.js',
@@ -61,7 +57,7 @@ const config: webpack.Configuration = {
   },
   devServer: {
     historyApiFallback: true,
-  }
+  },
 };
 
 export default config;
