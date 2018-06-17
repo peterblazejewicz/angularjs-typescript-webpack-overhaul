@@ -1,4 +1,4 @@
-import { IHttpService, IPromise } from "../../node_modules/@types/angular";
+import { IHttpService, IPromise } from "angular";
 
 export class PeopleService {
 
