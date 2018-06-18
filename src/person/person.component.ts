@@ -1,11 +1,24 @@
-import { IComponentOptions, IController, IOnChangesObject } from 'angular';
+import { IComponentOptions, IController, IOnChangesObject, IChangesObject } from 'angular';
+import { Person } from '../common/model/person';
+
+
+interface PersonComponentChanges  extends IOnChangesObject {
+  [key: string]: any;
+  person: IChangesObject<Person>;
+}
 
 class PersonController implements IController {
 
+  public person: Person;
+
   constructor() {}
 
-  $onChanges(changes: IOnChangesObject) {
+  $onChanges(changes: PersonComponentChanges) {
     console.info('$onChanges');
+    if(changes.person.isFirstChange) {
+      console.log('first change');
+      // do other stuff with person object
+    }
   }
 
   $onInit() {
