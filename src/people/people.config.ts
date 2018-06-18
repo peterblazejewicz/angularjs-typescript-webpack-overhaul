@@ -1,5 +1,7 @@
 import { StateProvider, UrlRouterProvider } from '@uirouter/angularjs';
+import { IPromise } from 'angular';
 
+import { Person } from '../common/model/person';
 import { PeopleService } from './people.service';
 
 const PeopleConfig = (
@@ -12,7 +14,7 @@ const PeopleConfig = (
     resolve: [
       {
         provide: 'people',
-        useFactory: (service: PeopleService) => service.getAllPeople(),
+        useFactory: (service: PeopleService): IPromise<Person[]> => service.getAllPeople(),
         deps: ['PeopleService'],
       },
     ],
