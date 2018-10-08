@@ -17,28 +17,18 @@ class PersonController implements IController {
   constructor() {}
 
   $onChanges(changes: PersonComponentChanges) {
-    console.info('$onChanges');
     if (changes.person.isFirstChange) {
-      console.log('first change');
       // do other stuff with person object
     }
   }
 
-  $onInit() {
-    console.info('$onInit');
-  }
+  $onInit() {}
 
-  $doCheck() {
-    console.info('$doCheck');
-  }
+  $doCheck() {}
 
-  $postLink() {
-    console.info('$postLink');
-  }
+  $postLink() {}
 
-  $onDestroy() {
-    console.info('$onDestroy');
-  }
+  $onDestroy() {}
 }
 
 export const PersonComponent: IComponentOptions = {

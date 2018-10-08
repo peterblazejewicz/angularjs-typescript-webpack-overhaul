@@ -8,7 +8,6 @@ const HelloConfig = (
     url: '/hello',
     component: 'hello',
   });
-  $urlRouterProvider.otherwise('/');
 };
 HelloConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
 
