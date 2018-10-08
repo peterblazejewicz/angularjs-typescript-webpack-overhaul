@@ -8,7 +8,7 @@ const root = path.resolve(__dirname, 'src');
 const dist = path.resolve(__dirname, 'dist');
 
 const config: webpack.Configuration = {
-  entry: './src/index.ts',
+  entry: './src/main.ts',
   devtool: 'inline-source-map',
   mode: 'development',
   module: {
@@ -39,7 +39,7 @@ const config: webpack.Configuration = {
     new CleanWebpackPlugin(['dist']),
     new CopyWebpackPlugin([
       {
-        from: `${root}/data/people.json`,
+        from: `${root}/assets/data/people.json`,
         to: `${dist}/data/people.json`,
       },
     ]),
