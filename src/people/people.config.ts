@@ -14,7 +14,8 @@ const PeopleConfig = (
     resolve: [
       {
         provide: 'people',
-        useFactory: (service: PeopleService): IPromise<Person[]> => service.getAllPeople(),
+        useFactory: (service: PeopleService): IPromise<Person[]> =>
+          service.getAllPeople(),
         deps: ['PeopleService'],
       },
     ],

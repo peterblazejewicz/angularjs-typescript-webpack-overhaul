@@ -5,7 +5,7 @@ import { Person } from '../common/model/person';
 export class PeopleService {
   static $inject: string[] = ['$http'];
 
-  constructor(private $http: IHttpService) { }
+  constructor(private $http: IHttpService) {}
 
   getAllPeople(): IPromise<Person[]> {
     return this.$http

@@ -1,4 +1,8 @@
-import { StateProvider, Transition, UrlRouterProvider } from '@uirouter/angularjs';
+import {
+  StateProvider,
+  Transition,
+  UrlRouterProvider,
+} from '@uirouter/angularjs';
 import { IPromise } from 'angular';
 
 import { Person } from './../common/model/person';
@@ -14,7 +18,10 @@ const PersonConfig = (
     resolve: [
       {
         provide: 'person',
-        useFactory: (service: PeopleService, $transitions$: Transition): IPromise<Person> =>
+        useFactory: (
+          service: PeopleService,
+          $transitions$: Transition,
+        ): IPromise<Person> =>
           service.getPerson($transitions$.params().personId),
         deps: ['PeopleService', Transition],
       },
