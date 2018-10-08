@@ -4,8 +4,8 @@
   "description": "An attempt to overhaul the @vsternbach TS seed",
   "private": true,
   "scripts": {
-    "start": "TS_NODE_PROJECT=\"tsconfig-for-webpack-config.json\" webpack-dev-server --mode development --open --hot",
-    "prettier": "prettier --config ./prettier.config.json --write \"**/*.ts\""
+    "start": "TS_NODE_PROJECT=\"tsconfig.webpack.json\" webpack-dev-server --mode development --open --hot",
+    "prettier": "prettier --config ./.prettierrc --write \"**/*.ts\""
   },
   "repository": {
     "type": "git",
