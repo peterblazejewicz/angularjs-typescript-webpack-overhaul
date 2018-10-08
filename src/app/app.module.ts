@@ -12,10 +12,7 @@ import { AppComponent } from './app.component';
 
 // Import your app functionality
 
-const app = angular
+export const app = angular
   .module('app', [uirouter, about.name, hello.name, people.name, person.name])
+  .config(appConfig)
   .component('appComponent', AppComponent);
-
-app.config(appConfig);
-
-export default app;
