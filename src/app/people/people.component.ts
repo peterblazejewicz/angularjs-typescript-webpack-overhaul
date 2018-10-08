@@ -7,5 +7,5 @@ export const PeopleComponent: IComponentOptions = {
     people: '<',
   },
   controller: PeopleController,
-  templateUrl: './people.template.html',
+  templateUrl: './people.component.html',
 };

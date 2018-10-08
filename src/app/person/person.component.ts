@@ -36,7 +36,7 @@ export const PersonComponent: IComponentOptions = {
     person: '<',
   },
   controller: PersonController,
-  templateUrl: './person.template.html',
+  templateUrl: './person.component.html',
 };
 
 export default PersonComponent;

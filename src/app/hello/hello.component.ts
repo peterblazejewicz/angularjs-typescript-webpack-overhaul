@@ -9,7 +9,7 @@ class HelloController implements IController {
 }
 
 export const HelloComponent: IComponentOptions = {
-  templateUrl: './hello.template.html',
+  templateUrl: './hello.component.html',
   controller: HelloController,
   bindings: {
     greeting: '<',
